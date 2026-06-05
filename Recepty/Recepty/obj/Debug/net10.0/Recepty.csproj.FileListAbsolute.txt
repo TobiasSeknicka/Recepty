@@ -72,3 +72,13 @@ C:\Users\tsekn\Documents\Recepty_PR\Recepty\Recepty\obj\Debug\net10.0\refint\Rec
 C:\Users\tsekn\Documents\Recepty_PR\Recepty\Recepty\obj\Debug\net10.0\Recepty.pdb
 C:\Users\tsekn\Documents\Recepty_PR\Recepty\Recepty\obj\Debug\net10.0\Recepty.genruntimeconfig.cache
 C:\Users\tsekn\Documents\Recepty_PR\Recepty\Recepty\obj\Debug\net10.0\ref\Recepty.dll
+C:\Users\tsekn\Documents\Recepty_PR\Recepty\Recepty\obj\Debug\net10.0\Recepty.sourcelink.json
+C:\Users\tsekn\Documents\Recepty_PR\Recepty\Recepty\bin\Debug\net10.0\DotNetEnv.dll
+C:\Users\tsekn\Documents\Recepty_PR\Recepty\Recepty\bin\Debug\net10.0\Microsoft.Extensions.Configuration.dll
+C:\Users\tsekn\Documents\Recepty_PR\Recepty\Recepty\bin\Debug\net10.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\tsekn\Documents\Recepty_PR\Recepty\Recepty\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\tsekn\Documents\Recepty_PR\Recepty\Recepty\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\tsekn\Documents\Recepty_PR\Recepty\Recepty\bin\Debug\net10.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\tsekn\Documents\Recepty_PR\Recepty\Recepty\bin\Debug\net10.0\Microsoft.Extensions.Primitives.dll
+C:\Users\tsekn\Documents\Recepty_PR\Recepty\Recepty\bin\Debug\net10.0\Npgsql.dll
+C:\Users\tsekn\Documents\Recepty_PR\Recepty\Recepty\bin\Debug\net10.0\Superpower.dll
