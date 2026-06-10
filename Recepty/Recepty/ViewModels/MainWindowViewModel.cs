@@ -23,8 +23,17 @@ public partial class MainWindowViewModel : ViewModelBase
     {
         CurrentPage = new ReceptListViewModel(
             _receptRepository,
-            recept => { /* Detail — přidáme v dalším kroku */ },
+            recept => ShowDetail(recept),
             recept => ShowForm(recept)
+        );
+    }
+
+    private void ShowDetail(Recept recept)
+    {
+        CurrentPage = new ReceptDetailViewModel(
+            _ingredRepository,
+            recept,
+            onBack: ShowList
         );
     }
 

@@ -29,6 +29,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/tsekn/Documents/Recepty_PR/Recepty/Recepty/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/tsekn/Documents/Recepty_PR/Recepty/Recepty/Views/ReceptDetailView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/tsekn/Documents/Recepty_PR/Recepty/Recepty/Views/ReceptFormView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
