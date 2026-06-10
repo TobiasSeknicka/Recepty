@@ -1,0 +1,41 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:Recepty.ViewModels"
+             xmlns:models="using:Recepty.Models"
+             x:Class="Recepty.Views.ReceptFormView"
+             x:DataType="vm:ReceptFormViewModel">
+    <StackPanel Margin="16" Spacing="10" MaxWidth="500" HorizontalAlignment="Left">
+
+        <TextBlock Text="{Binding Nadpis}" FontSize="22" FontWeight="Bold"/>
+
+        <TextBlock Text="Název *"/>
+        <TextBox Text="{Binding Nazev}"/>
+
+        <TextBlock Text="Kategorie *"/>
+        <ComboBox ItemsSource="{Binding Kategorie}"
+                  SelectedItem="{Binding SelectedKategorie}"
+                  HorizontalAlignment="Stretch">
+            <ComboBox.ItemTemplate>
+                <DataTemplate x:DataType="models:Kategorie">
+                    <TextBlock Text="{Binding Nazev}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <TextBlock Text="Počet porcí"/>
+        <TextBox Text="{Binding PocetPorci}"/>
+
+        <TextBlock Text="Postup"/>
+        <TextBox Text="{Binding Postup}" AcceptsReturn="True" Height="120"
+                 TextWrapping="Wrap"/>
+
+        <TextBlock Text="{Binding Chyba}" Foreground="Red"
+                   IsVisible="{Binding Chyba, Converter={x:Static StringConverters.IsNotNullOrEmpty}}"/>
+
+        <StackPanel Orientation="Horizontal" Spacing="8">
+            <Button Command="{Binding SaveCommand}" Content="Uložit"/>
+            <Button Command="{Binding CancelCommand}" Content="Zrušit"/>
+        </StackPanel>
+
+    </StackPanel>
+</UserControl>

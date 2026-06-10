@@ -1,0 +1,33 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:Recepty.ViewModels"
+             xmlns:models="using:Recepty.Models"
+             x:Class="Recepty.Views.ReceptListView"
+             x:DataType="vm:ReceptListViewModel">
+    <DockPanel Margin="16">
+
+        <TextBlock DockPanel.Dock="Top" Text="Recepty" FontSize="24"
+                   FontWeight="Bold" Margin="0,0,0,12"/>
+
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal"
+                    Spacing="8" Margin="0,0,0,12">
+            <Button Command="{Binding AddReceptCommand}" Content="+ Přidat recept"/>
+            <Button Command="{Binding ShowDetailCommand}" Content="Otevřít detail"/>
+            <Button Command="{Binding DeleteReceptCommand}" Content="Smazat"/>
+        </StackPanel>
+
+        <ListBox ItemsSource="{Binding Recepty}"
+                 SelectedItem="{Binding SelectedRecept}">
+            <ListBox.ItemTemplate>
+                <DataTemplate x:DataType="models:Recept">
+                    <StackPanel Margin="4">
+                        <TextBlock Text="{Binding Nazev}" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding KategorieNazev}"
+                                   FontSize="12" Opacity="0.6"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+    </DockPanel>
+</UserControl>

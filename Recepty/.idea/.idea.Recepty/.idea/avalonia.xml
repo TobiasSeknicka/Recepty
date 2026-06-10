@@ -4,6 +4,8 @@
     <option name="projectPerEditor">
       <map>
         <entry key="Recepty/Views/MainWindow.axaml" value="Recepty/Recepty.csproj" />
+        <entry key="Recepty/Views/ReceptFormView.axaml" value="Recepty/Recepty.csproj" />
+        <entry key="Recepty/Views/ReceptListView.axaml" value="Recepty/Recepty.csproj" />
       </map>
     </option>
   </component>
