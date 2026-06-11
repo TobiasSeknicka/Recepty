@@ -14,6 +14,9 @@ public partial class ReceptDetailViewModel : ViewModelBase
 
     public string ReceptNazev => _recept.Nazev;
     public string ReceptKategorie => _recept.KategorieNazev;
+    public string ReceptPorci => _recept.PocetPorci.HasValue
+        ? $"{_recept.PocetPorci} porcí"
+        : "(počet porcí neuveden)";
     public string ReceptPostup => string.IsNullOrWhiteSpace(_recept.Postup) ? "(bez postupu)" : _recept.Postup;
 
     public ObservableCollection<Ingredience> Ingredience { get; } = new();
@@ -35,12 +38,13 @@ public partial class ReceptDetailViewModel : ViewModelBase
     private string _chyba = string.Empty;
 
     private readonly Action _onBack;
-
-    public ReceptDetailViewModel(IIngredRepository ingredRepository, Recept recept, Action onBack)
+    private readonly Action<Recept> _onEdit;
+    public ReceptDetailViewModel(IIngredRepository ingredRepository, Recept recept, Action onBack, Action<Recept> onEdit)
     {
         _ingredRepository = ingredRepository;
         _recept = recept;
         _onBack = onBack;
+        _onEdit = onEdit;
         LoadIngredience();
     }
 
@@ -96,6 +100,9 @@ public partial class ReceptDetailViewModel : ViewModelBase
         LoadIngredience();
         ClearForm();
     }
+    
+    [RelayCommand]
+    private void EditRecept() => _onEdit(_recept);
 
     [RelayCommand]
     private void Back() => _onBack();

@@ -33,7 +33,8 @@ public partial class MainWindowViewModel : ViewModelBase
         CurrentPage = new ReceptDetailViewModel(
             _ingredRepository,
             recept,
-            onBack: ShowList
+            onBack: ShowList,
+            onEdit: ShowForm
         );
     }
 
