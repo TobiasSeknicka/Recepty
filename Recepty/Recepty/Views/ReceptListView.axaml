@@ -15,7 +15,8 @@
             <Button Command="{Binding ShowDetailCommand}" Content="Otevřít detail"/>
             <Button Command="{Binding DeleteReceptCommand}" Content="Smazat"/>
         </StackPanel>
-
+        <TextBox DockPanel.Dock="Top" Watermark="Hledat recept…"
+                 Text="{Binding Hledani}" Margin="0,0,0,12"/>
         <ListBox ItemsSource="{Binding Recepty}"
                  SelectedItem="{Binding SelectedRecept}">
             <ListBox.ItemTemplate>
